@@ -11,7 +11,14 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let APP_ID = "B178E8EE-9AAD-8FA2-FF55-3BDC7D73AF00"
+    let API_KEY = "01995B87-BEF3-A43E-FF24-D28F9300FF00"
+    var backendless = Backendless.sharedInstance()
     var window: UIWindow?
+    func application (application : UIApplication , didFinishLaunchingWithOptions LaunchOptins : [NSObject : AnyObject]?) -> Bool {
+        backendless?.initApp(APP_ID , apiKey : API_KEY)
+        return true
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

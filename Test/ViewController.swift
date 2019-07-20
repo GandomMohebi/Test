@@ -25,17 +25,18 @@ class ViewController: UIViewController {
 //
         
         
-        
+    }
         
         // Do any additional setup after loading the view, typically from a nib.
-    }
+    
     let backendless = Backendless.sharedInstance()!
 
     func registerUser() {
         // do not forget to call Backendless.initApp when your app initializes
         let user = BackendlessUser()
-        user.setProperty("email", object: "james2.bond@mi6.co.uk")
-        user.password = "111"
+        user.setProperty("email", object: "james3.bond@mi6.co.uk")
+        user.password = "001"
+        user.name = "jame"
         backendless.userService.register(user,
                                          response: {
                                             (registeredUser : BackendlessUser?) -> Void in
@@ -48,50 +49,60 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
-    
-//    let backendless1 = Backendless.sharedInstance()!
-//    
-//    func registerUser1() {
-//        // do not forget to call Backendless.initApp when your app initializes
-//        let user = BackendlessUser()
-//        
-//        user.setProperty("email", object: "james2.bond@mi6.co.uk")
-//        user.password = (Pass.text)
-//        backendless1.userService.register(user,
-//                                         response: {
-//                                            (registeredUser : BackendlessUser?) -> Void in
-//                                            print("User registered \(registeredUser?.value(forKey: "email"))")
-//        },
-//                                         error: {
-//                                            (fault : Fault?) -> Void in
-//                                            print("Server reported an error: \(fault?.description)")
-//        })
-//    }
-//    
-    
-    
-    
-    
-    
 
-   
+    
+    
+//login
+    func loginUser () {
+        backendless.userService.login("james.bond@mi6.co.uk",
+                                      password: "000",
+                                      response: {
+                                        (loggedUser : BackendlessUser?) -> Void in
+                                        print("User logged in")
+        },
+                                      error: {
+                                        (fault : Fault?) -> Void in
+                                        print("Server reported an error: \(fault?.description)")
+        })
+    }
+    
+    
+    // update
+    Backendless.UserService.login (username , password , AsyncCallback<BackendlessUser>)
+{
+    public void handleResponse (BackendlessUser user)
+  {
+    user.setProperty( "phoneNumber", "5551212" );
+    Backendless.UserService.update( user, new AsyncCallback<BackendlessUser>()
+    {
+    public void handleResponse( BackendlessUser user )
+    {
+    }
+    
+    public void handleFault( BackendlessFault fault )
+    {
+    }
+    
+    });
+  }
+    public void handleFault( BackendlessFault fault )
+    {
+    }
+});
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func Register(_ sender: Any) {
     registerUser()
-        print("Registered")
+        loginUser()
     }
 }
 

@@ -65,13 +65,16 @@ class ViewController: UIViewController {
                                         print("Server reported an error: \(fault?.description)")
         })
     }
-    
+  
     
     // update
-    Backendless.UserService.login (username , password , AsyncCallback<BackendlessUser>)
-{
-    public void handleResponse (BackendlessUser user)
+
+    func update (){
+        backendless.userService.login(username, password ,new AsyncCallback<BackendlessUser>();
+
   {
+    public void handleResponse (BackendlessUser user)
+    {
     user.setProperty( "phoneNumber", "5551212" );
     Backendless.UserService.update( user, new AsyncCallback<BackendlessUser>()
     {
@@ -90,7 +93,7 @@ class ViewController: UIViewController {
     }
 });
     
-    
+    }
     
     
     

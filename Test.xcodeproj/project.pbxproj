@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F2C5BF97FBDCC17E2570B7A /* Pods_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4800E6DD27511A11768E301F /* Pods_TestUITests.framework */; };
+		4B73EDBA22E4A2C0001B1907 /* gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B73EDB922E4A2C0001B1907 /* gym.swift */; };
 		4BCBF5FC22D48C72006AE34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCBF5FB22D48C72006AE34E /* AppDelegate.swift */; };
 		4BCBF5FE22D48C72006AE34E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCBF5FD22D48C72006AE34E /* ViewController.swift */; };
 		4BCBF60122D48C72006AE34E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCBF5FF22D48C72006AE34E /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		38B880654AF3FB0461CFB335 /* Pods-TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTests.debug.xcconfig"; path = "Target Support Files/Pods-TestTests/Pods-TestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EA73D0E8DA1A3CF8A7FCF43 /* Pods-TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUITests.release.xcconfig"; path = "Target Support Files/Pods-TestUITests/Pods-TestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4800E6DD27511A11768E301F /* Pods_TestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B73EDB922E4A2C0001B1907 /* gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gym.swift; sourceTree = "<group>"; };
 		4BCBF5F822D48C72006AE34E /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCBF5FB22D48C72006AE34E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BCBF5FD22D48C72006AE34E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				4BCBF5FB22D48C72006AE34E /* AppDelegate.swift */,
 				4BCBF5FD22D48C72006AE34E /* ViewController.swift */,
+				4B73EDB922E4A2C0001B1907 /* gym.swift */,
 				4BCBF5FF22D48C72006AE34E /* Main.storyboard */,
 				4BCBF60222D48C74006AE34E /* Assets.xcassets */,
 				4BCBF60422D48C74006AE34E /* LaunchScreen.storyboard */,
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B73EDBA22E4A2C0001B1907 /* gym.swift in Sources */,
 				4BCBF5FE22D48C72006AE34E /* ViewController.swift in Sources */,
 				4BCBF5FC22D48C72006AE34E /* AppDelegate.swift in Sources */,
 			);

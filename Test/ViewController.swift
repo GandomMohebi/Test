@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , UITableViewDataSource{
 
     @IBAction func Pass(_ sender: Any) {
     }
@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+   
 //        let backendless = Backendless.sharedInstance()!
 //        func backendless.userService.register(user: BackendlessUser!,
 //                                              response: ((BackendlessUser?) -> Void)!,
@@ -68,44 +69,67 @@ class ViewController: UIViewController {
   
     
     // update
+//
+//    func update (){
+//        backendless.userService.login(username, password ,new AsyncCallback<BackendlessUser>();
+//
+//  {
+//    public void handleResponse (BackendlessUser user)
+//    {
+//    user.setProperty( "phoneNumber", "5551212" );
+//    Backendless.UserService.update( user, new AsyncCallback<BackendlessUser>()
+//    {
+//    public void handleResponse( BackendlessUser user )
+//    {
+//    }
+//
+//    public void handleFault( BackendlessFault fault )
+//    {
+//    }
+//    
+//    });
+//  }
+//    public void handleFault( BackendlessFault fault )
+//    {
+//    }
+//});
+//
+//    }
+//
+    
+    func getObj (){
+        let dataStore = self.backendless.data.ofTable ("gym");
 
-    func update (){
-        backendless.userService.login(username, password ,new AsyncCallback<BackendlessUser>();
+        dataStore?.find({
+            (array) -> () in
+            let gymArray = array as! [[String : Any]]
+            print("Result: \(gymArray)")
+        },
+                        error: {
+                            (fault : Fault?) -> () in
+                            print("Server reported an error: \(fault)")
+        })
+        
+    }
 
-  {
-    public void handleResponse (BackendlessUser user)
-    {
-    user.setProperty( "phoneNumber", "5551212" );
-    Backendless.UserService.update( user, new AsyncCallback<BackendlessUser>()
-    {
-    public void handleResponse( BackendlessUser user )
-    {
-    }
-    
-    public void handleFault( BackendlessFault fault )
-    {
-    }
-    
-    });
-  }
-    public void handleFault( BackendlessFault fault )
-    {
-    }
-});
-    
-    }
-    
-    
-    
-    
-    
-    
     
     
     
     @IBAction func Register(_ sender: Any) {
     registerUser()
         loginUser()
+        
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "data"
+        return cell
     }
 }
 

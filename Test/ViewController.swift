@@ -15,20 +15,16 @@ class ViewController: UIViewController , UITableViewDataSource{
     @IBAction func Imail(_ sender: Any) {
     }
     
+    var gymArray  = [[String: Any]]()
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-   
-//        let backendless = Backendless.sharedInstance()!
-//        func backendless.userService.register(user: BackendlessUser!,
-//                                              response: ((BackendlessUser?) -> Void)!,
-//                                              error: ((Fault?) -> Void)!) -> Void
-//
-        
-        
+
     }
         
-        // Do any additional setup after loading the view, typically from a nib.
     
     let backendless = Backendless.sharedInstance()!
 
@@ -97,19 +93,18 @@ class ViewController: UIViewController , UITableViewDataSource{
 //    }
 //
     
-    func getObj (){
+    func get (){
         let dataStore = self.backendless.data.ofTable ("gym");
 
         dataStore?.find({
             (array) -> () in
-            let gymArray = array as! [[String : Any]]
-            print("Result: \(gymArray)")
+            self.gymArray = array as! [[String : Any]]
+            print("Result: \(self.gymArray)")
         },
                         error: {
                             (fault : Fault?) -> () in
                             print("Server reported an error: \(fault)")
         })
-        
     }
 
     
@@ -118,17 +113,17 @@ class ViewController: UIViewController , UITableViewDataSource{
     @IBAction func Register(_ sender: Any) {
     registerUser()
         loginUser()
+        get()
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return gymArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
+       
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "data"
+        cell.textLabel?.text = "g"
         return cell
     }
 }

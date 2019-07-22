@@ -23,6 +23,7 @@ class ViewController: UIViewController , UITableViewDataSource{
         super.viewDidLoad()
         
 
+        getObj()
     }
         
     
@@ -93,7 +94,7 @@ class ViewController: UIViewController , UITableViewDataSource{
 //    }
 //
     
-    func get (){
+    func getObj (){
         let dataStore = self.backendless.data.ofTable ("gym");
 
         dataStore?.find({
@@ -110,12 +111,7 @@ class ViewController: UIViewController , UITableViewDataSource{
     
     
     
-    @IBAction func Register(_ sender: Any) {
-    registerUser()
-        loginUser()
-        get()
-        
-    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gymArray.count
     }
@@ -123,8 +119,15 @@ class ViewController: UIViewController , UITableViewDataSource{
        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "g"
+        cell.textLabel?.text = gymArray[indexPath.row]["name"] as? String
         return cell
+    }
+    
+    
+    @IBAction func Register(_ sender: Any) {
+        registerUser()
+        loginUser()
+        getObj()
     }
 }
 

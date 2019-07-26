@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="coX-X2-Lb3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,135 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--باشگاه یاب-->
+        <scene sceneID="bbd-Gb-0z9">
+            <objects>
+                <viewController id="T9l-Pg-oMV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ghA-ao-Zgn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GuM-Rs-Gl3">
+                                <rect key="frame" x="0.0" y="188" width="375" height="142"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WUC-b2-vu1">
+                                    <size key="itemSize" width="110" height="110"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cl5-6K-ems">
+                                        <rect key="frame" x="0.0" y="16" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="باشگاه های پرطدفدار" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8I-1m-Lo3">
+                                <rect key="frame" x="61" y="114" width="236" height="63"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="zIR-IO-ObU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تخفیف های ویژه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1i-y5-QfA">
+                                <rect key="frame" x="61" y="340" width="236" height="63"/>
+                                <color key="backgroundColor" red="0.14985010027885437" green="0.66641074419021606" blue="0.5607140064239502" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="k4R-u6-nSy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QJY-9M-5DK">
+                                <rect key="frame" x="0.0" y="412" width="375" height="186"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S31-mR-U5F">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vGq-Dv-ntY">
+                                        <rect key="frame" x="0.0" y="43" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2X-fp-Prq">
+                                <rect key="frame" x="16" y="64" width="68" height="30"/>
+                                <state key="normal" title="نمایش همه"/>
+                                <connections>
+                                    <segue destination="S5M-pK-epG" kind="show" id="7lS-df-680"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w8I-1m-Lo3" firstAttribute="top" secondItem="nq9-ng-iHd" secondAttribute="top" constant="50" id="2ws-W1-N8o"/>
+                            <constraint firstItem="QJY-9M-5DK" firstAttribute="top" secondItem="g1i-y5-QfA" secondAttribute="bottom" constant="9" id="8bs-U8-jFI"/>
+                            <constraint firstItem="w8I-1m-Lo3" firstAttribute="leading" secondItem="g1i-y5-QfA" secondAttribute="leading" id="9I7-sm-M5O"/>
+                            <constraint firstItem="GuM-Rs-Gl3" firstAttribute="leading" secondItem="nq9-ng-iHd" secondAttribute="leading" id="Fsc-zG-4R6"/>
+                            <constraint firstItem="g1i-y5-QfA" firstAttribute="top" secondItem="GuM-Rs-Gl3" secondAttribute="bottom" constant="10" id="JHf-Fv-nlR"/>
+                            <constraint firstItem="nq9-ng-iHd" firstAttribute="trailing" secondItem="w8I-1m-Lo3" secondAttribute="trailing" constant="78" id="PVN-FL-6dX"/>
+                            <constraint firstItem="w8I-1m-Lo3" firstAttribute="leading" secondItem="nq9-ng-iHd" secondAttribute="leading" constant="61" id="V3m-M5-Afm"/>
+                            <constraint firstItem="GuM-Rs-Gl3" firstAttribute="top" secondItem="w8I-1m-Lo3" secondAttribute="bottom" constant="11" id="VYn-UQ-9Yb"/>
+                            <constraint firstItem="QJY-9M-5DK" firstAttribute="leading" secondItem="GuM-Rs-Gl3" secondAttribute="leading" id="elA-Zy-EgS"/>
+                            <constraint firstAttribute="bottom" secondItem="g1i-y5-QfA" secondAttribute="bottom" constant="264" id="mWG-Fb-yvW"/>
+                            <constraint firstItem="w8I-1m-Lo3" firstAttribute="trailing" secondItem="g1i-y5-QfA" secondAttribute="trailing" id="oIr-R2-uh5"/>
+                            <constraint firstItem="GuM-Rs-Gl3" firstAttribute="trailing" secondItem="nq9-ng-iHd" secondAttribute="trailing" id="oUG-OP-XuO"/>
+                            <constraint firstItem="e2X-fp-Prq" firstAttribute="leading" secondItem="nq9-ng-iHd" secondAttribute="leading" constant="16" id="s0N-7T-aci"/>
+                            <constraint firstItem="e2X-fp-Prq" firstAttribute="top" secondItem="nq9-ng-iHd" secondAttribute="top" id="tnI-ce-ExR"/>
+                            <constraint firstItem="nq9-ng-iHd" firstAttribute="bottom" secondItem="QJY-9M-5DK" secondAttribute="bottom" constant="20" id="wWx-JI-fJq"/>
+                            <constraint firstItem="QJY-9M-5DK" firstAttribute="trailing" secondItem="GuM-Rs-Gl3" secondAttribute="trailing" id="wj1-K9-gM1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nq9-ng-iHd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="باشگاه یاب" id="Loz-J6-RnM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fS9-ec-QmP"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RaY-Pm-7DS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687.2" y="353.9730134932534"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Uv-rf-Yc5">
+            <objects>
+                <viewController id="S5M-pK-epG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7gu-df-RH2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="slm gandomiiiiiiiiiiiiiiii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="486-09-gA3">
+                                <rect key="frame" x="166" y="199" width="155" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gco-8u-eUE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FKi-bV-Pcq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2992.8000000000002" y="296.40179910044981"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -57,10 +186,84 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Vx2-F4-KQv" id="yIM-Na-4Ve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="119.1904047976012"/>
+            <point key="canvasLocation" x="-282" y="74"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="CzO-Wv-n66">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="coX-X2-Lb3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m1A-bq-jdI">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xl2-3V-yI3" kind="relationship" relationship="viewControllers" id="dje-bm-XwE"/>
+                        <segue destination="lMk-GI-EQb" kind="relationship" relationship="viewControllers" id="PTo-gI-LLX"/>
+                        <segue destination="ecd-N2-n5g" kind="relationship" relationship="viewControllers" id="vJL-5a-1c4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xG2-Vb-Bw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-641" y="996"/>
+        </scene>
+        <!--ورزش-->
+        <scene sceneID="pSX-bV-rg9">
+            <objects>
+                <viewController id="lMk-GI-EQb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wZg-Ur-WmE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dF1-t3-bV5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ورزش" id="5g3-8P-7oh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s36-Ua-CoW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="1084"/>
+        </scene>
+        <!--پروفایل-->
+        <scene sceneID="4YX-J4-M7z">
+            <objects>
+                <viewController id="ecd-N2-n5g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5em-QA-Kr8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="h9s-mK-2F2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="پروفایل" id="YMZ-w4-fPA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAz-1z-265" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="1763"/>
+        </scene>
+        <!--باشگاه-->
+        <scene sceneID="VUb-dJ-PYy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xl2-3V-yI3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="باشگاه" id="rj6-Rx-XbN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Za-p8-v4M">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T9l-Pg-oMV" kind="relationship" relationship="rootViewController" id="Ae1-mo-qBG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4V-QU-EZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="353.9730134932534"/>
         </scene>
     </scenes>
 </document>

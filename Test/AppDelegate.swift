@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         backendless?.initApp(APP_ID , apiKey : API_KEY)
+        
+        
+        UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        
         return true
     }
 

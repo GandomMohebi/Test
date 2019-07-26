@@ -14,10 +14,9 @@ class ViewController: UIViewController , UITableViewDataSource{
     }
     @IBAction func Imail(_ sender: Any) {
     }
+    @IBOutlet weak var tableView: UITableView!
     
-    var gymArray  = [[String: Any]]()
-
-    
+    var gymArray : [gym] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,17 +94,36 @@ class ViewController: UIViewController , UITableViewDataSource{
 //
     
     func getObj (){
-        let dataStore = self.backendless.data.ofTable ("gym");
+        let dataStore = self.backendless.data.of(gym().ofClass());
+        
+        
+//        DispatchQueue.global().async {
+//            let array = dataStore?.find() as! [gym]
+//            DispatchQueue.main.async {
+//                self.gymArray = array
+//                self.tableView.reloadData()
+//            }
+//        }
+        
+        dataStore?.find({ items in
+            let gymItems = items as! [gym]
+            print(gymItems.map{$0.image})
+            self.gymArray = gymItems
+            self.tableView.reloadData()
 
-        dataStore?.find({
-            (array) -> () in
-            self.gymArray = array as! [[String : Any]]
-            print("Result: \(self.gymArray)")
-        },
-                        error: {
-                            (fault : Fault?) -> () in
-                            print("Server reported an error: \(fault)")
+        }, error: { fault in
+            print(fault?.description)
         })
+
+//        dataStore?.find({
+//            (array) -> () in
+//            self.gymArray = array as! [[String : Any]]
+//            print("Result: \(self.gymArray)")
+//        },
+//                        error: {
+//                            (fault : Fault?) -> () in
+//                            print("Server reported an error: \(fault)")
+//        })
     }
 
     
@@ -119,15 +137,25 @@ class ViewController: UIViewController , UITableViewDataSource{
        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = gymArray[indexPath.row]["name"] as? String
+        let gym1 = gymArray[indexPath.row]
+        cell.textLabel?.text = gym1.name
         return cell
     }
     
+//    func insert (){
+//        backendless.data.of(gym.self).save(gym() , response :{(resault : (Any?)) -> Void in let gym = resault as! gym ;
+//            print ("\(resault)")
+//        }, error : {( fault : Fault?) -> () in
+//            print("Server reported an error: \(fault)")})
+//    };
+    
     
     @IBAction func Register(_ sender: Any) {
+//        insert()
         registerUser()
         loginUser()
-        getObj()
+//        getObj()
     }
 }
+
 

@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cl5-6K-ems">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="cl5-6K-ems">
                                         <rect key="frame" x="0.0" y="16" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -68,7 +68,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vGq-Dv-ntY">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="vGq-Dv-ntY">
                                         <rect key="frame" x="0.0" y="43" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -79,7 +79,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2X-fp-Prq">
-                                <rect key="frame" x="16" y="64" width="68" height="30"/>
+                                <rect key="frame" x="291" y="76" width="68" height="30"/>
                                 <state key="normal" title="نمایش همه"/>
                                 <connections>
                                     <segue destination="S5M-pK-epG" kind="show" id="7lS-df-680"/>
@@ -90,18 +90,18 @@
                         <constraints>
                             <constraint firstItem="w8I-1m-Lo3" firstAttribute="top" secondItem="nq9-ng-iHd" secondAttribute="top" constant="50" id="2ws-W1-N8o"/>
                             <constraint firstItem="QJY-9M-5DK" firstAttribute="top" secondItem="g1i-y5-QfA" secondAttribute="bottom" constant="9" id="8bs-U8-jFI"/>
+                            <constraint firstItem="e2X-fp-Prq" firstAttribute="top" secondItem="nq9-ng-iHd" secondAttribute="top" constant="12" id="9Al-lJ-YUm"/>
                             <constraint firstItem="w8I-1m-Lo3" firstAttribute="leading" secondItem="g1i-y5-QfA" secondAttribute="leading" id="9I7-sm-M5O"/>
                             <constraint firstItem="GuM-Rs-Gl3" firstAttribute="leading" secondItem="nq9-ng-iHd" secondAttribute="leading" id="Fsc-zG-4R6"/>
                             <constraint firstItem="g1i-y5-QfA" firstAttribute="top" secondItem="GuM-Rs-Gl3" secondAttribute="bottom" constant="10" id="JHf-Fv-nlR"/>
                             <constraint firstItem="nq9-ng-iHd" firstAttribute="trailing" secondItem="w8I-1m-Lo3" secondAttribute="trailing" constant="78" id="PVN-FL-6dX"/>
+                            <constraint firstItem="nq9-ng-iHd" firstAttribute="trailing" secondItem="e2X-fp-Prq" secondAttribute="trailing" constant="16" id="TmY-BH-J7t"/>
                             <constraint firstItem="w8I-1m-Lo3" firstAttribute="leading" secondItem="nq9-ng-iHd" secondAttribute="leading" constant="61" id="V3m-M5-Afm"/>
                             <constraint firstItem="GuM-Rs-Gl3" firstAttribute="top" secondItem="w8I-1m-Lo3" secondAttribute="bottom" constant="11" id="VYn-UQ-9Yb"/>
                             <constraint firstItem="QJY-9M-5DK" firstAttribute="leading" secondItem="GuM-Rs-Gl3" secondAttribute="leading" id="elA-Zy-EgS"/>
                             <constraint firstAttribute="bottom" secondItem="g1i-y5-QfA" secondAttribute="bottom" constant="264" id="mWG-Fb-yvW"/>
                             <constraint firstItem="w8I-1m-Lo3" firstAttribute="trailing" secondItem="g1i-y5-QfA" secondAttribute="trailing" id="oIr-R2-uh5"/>
                             <constraint firstItem="GuM-Rs-Gl3" firstAttribute="trailing" secondItem="nq9-ng-iHd" secondAttribute="trailing" id="oUG-OP-XuO"/>
-                            <constraint firstItem="e2X-fp-Prq" firstAttribute="leading" secondItem="nq9-ng-iHd" secondAttribute="leading" constant="16" id="s0N-7T-aci"/>
-                            <constraint firstItem="e2X-fp-Prq" firstAttribute="top" secondItem="nq9-ng-iHd" secondAttribute="top" id="tnI-ce-ExR"/>
                             <constraint firstItem="nq9-ng-iHd" firstAttribute="bottom" secondItem="QJY-9M-5DK" secondAttribute="bottom" constant="20" id="wWx-JI-fJq"/>
                             <constraint firstItem="QJY-9M-5DK" firstAttribute="trailing" secondItem="GuM-Rs-Gl3" secondAttribute="trailing" id="wj1-K9-gM1"/>
                         </constraints>
@@ -237,14 +237,27 @@
                     <view key="view" contentMode="scaleToFill" id="5em-QA-Kr8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ao-Cg-wVL">
+                                <rect key="frame" x="35" y="176" width="305" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-hh-2iZ">
+                                <rect key="frame" x="97" y="378" width="183" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="h9s-mK-2F2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="پروفایل" id="YMZ-w4-fPA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAz-1z-265" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="1763"/>
+            <point key="canvasLocation" x="748" y="1762.6686656671666"/>
         </scene>
         <!--باشگاه-->
         <scene sceneID="VUb-dJ-PYy">

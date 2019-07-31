@@ -8,7 +8,7 @@
 
 import UIKit
 
-@UIApplicationMain
+@UIApplicationMain 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let APP_ID = "B178E8EE-9AAD-8FA2-FF55-3BDC7D73AF00"

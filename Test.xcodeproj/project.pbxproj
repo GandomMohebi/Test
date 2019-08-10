@@ -12,6 +12,7 @@
 		4B2905A222F8B0B10015E352 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2905A022F8B0B10015E352 /* CustomCell.swift */; };
 		4B2905A322F8B0B10015E352 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B2905A122F8B0B10015E352 /* CustomCell.xib */; };
 		4B73EDBA22E4A2C0001B1907 /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B73EDB922E4A2C0001B1907 /* Gym.swift */; };
+		4B9190EC22FDADD900068013 /* GymDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9190EB22FDADD900068013 /* GymDetailViewController.swift */; };
 		4BADFE8D22FA261100685800 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BADFE8A22FA261100685800 /* 2.png */; };
 		4BADFE8E22FA261100685800 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BADFE8B22FA261100685800 /* 3.png */; };
 		4BADFE8F22FA261100685800 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BADFE8C22FA261100685800 /* 11.png */; };
@@ -54,6 +55,7 @@
 		4B2905A022F8B0B10015E352 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		4B2905A122F8B0B10015E352 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		4B73EDB922E4A2C0001B1907 /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
+		4B9190EB22FDADD900068013 /* GymDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDetailViewController.swift; sourceTree = "<group>"; };
 		4BADFE8A22FA261100685800 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		4BADFE8B22FA261100685800 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		4BADFE8C22FA261100685800 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				4BADFE9022FB560D00685800 /* AllOfGymViewController.swift */,
 				4BBE20B622F70973002618C8 /* GymViewController.swift */,
 				4B29059D22F8ADF60015E352 /* SportViewController.swift */,
+				4B9190EB22FDADD900068013 /* GymDetailViewController.swift */,
 				4B29059F22F8B07B0015E352 /* CustoCell */,
 				4BCBF60222D48C74006AE34E /* Assets.xcassets */,
 				4BADFE8A22FA261100685800 /* 2.png */,
@@ -370,6 +373,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
@@ -377,6 +381,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
@@ -443,6 +448,7 @@
 				4B2905A222F8B0B10015E352 /* CustomCell.swift in Sources */,
 				4B29059E22F8ADF60015E352 /* SportViewController.swift in Sources */,
 				4BADFE9122FB560D00685800 /* AllOfGymViewController.swift in Sources */,
+				4B9190EC22FDADD900068013 /* GymDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

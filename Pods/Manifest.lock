@@ -1,24 +1,28 @@
 PODS:
   - Backendless (5.2.12):
     - Socket.IO-Client-Swift (~> 14.0.0)
+  - Kingfisher (5.4.0)
   - Socket.IO-Client-Swift (14.0.0):
     - Starscream (~> 3.0.6)
   - Starscream (3.0.6)
 
 DEPENDENCIES:
   - Backendless
+  - Kingfisher (~> 5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Backendless
+    - Kingfisher
     - Socket.IO-Client-Swift
     - Starscream
 
 SPEC CHECKSUMS:
   Backendless: f2c7ff292e0dd225d63104f2218d4a987923d140
+  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   Socket.IO-Client-Swift: 21e6a8a23a7d367d5ddfab6cbbd3c679cf3c25d6
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: 211d128bcfed4a1d4042dfada0c02081eab2a1f8
+PODFILE CHECKSUM: c356b05cfb9fa5dae34eb27a9170d4c30b17206f
 
 COCOAPODS: 1.6.1

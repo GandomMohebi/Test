@@ -7,10 +7,11 @@
 //
 
 import UIKit
-
+import Kingfisher
 struct item {
     var imageName : String
 }
+var gymArray : [gym] = []
 
 var items : [item] = [item (imageName : "2"),
                       item (imageName : "3"),
@@ -32,7 +33,8 @@ class GymCollectionViewController: UIViewController  , UICollectionViewDataSourc
     
     @IBOutlet weak var discountedCollectionView: UICollectionView!
     
-    
+    let backendless = Backendless.sharedInstance()!
+
     
     private func setupCollectionView () {
         //            popularCollectionView.delegate = self
@@ -58,6 +60,7 @@ class GymCollectionViewController: UIViewController  , UICollectionViewDataSourc
         
         var item: item?
         
+        
         switch collectionView.tag {
         case 10:
             item = popularItems[indexPath.row]
@@ -71,7 +74,9 @@ class GymCollectionViewController: UIViewController  , UICollectionViewDataSourc
             return UICollectionViewCell()
         }
         
-        cell.customLabelName.text = "name Gym"
+        
+        let gym1 = gymArray[indexPath.row]
+        cell.customLabelName.text = gym1.name
         cell.customImageView.image = UIImage (named : item!.imageName )
         
         return cell
@@ -88,6 +93,7 @@ class GymCollectionViewController: UIViewController  , UICollectionViewDataSourc
         default:
             break
         }
+        
         self.performSegue(withIdentifier: "showGym", sender: item)
         print ("didseleted item \(indexPath)")
     }
@@ -100,6 +106,7 @@ class GymCollectionViewController: UIViewController  , UICollectionViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        get()
         
     }
     
@@ -138,22 +145,22 @@ class GymCollectionViewController: UIViewController  , UICollectionViewDataSourc
         
     }
     
+    
+    
+    func get() {
+    
+        let dataStore = self.backendless.data.of(gym().ofClass());
+        dataStore?.find({ items in
+            let gymItems = items as! [gym]
+            print(gymItems.map{$0.image})
+            gymArray = gymItems
+            self.popularCollectionView.reloadData()
+            self.discountedCollectionView.reloadData()
+        }, error: { fault in
+            print(fault?.description)
+        })
+
+        
+    }
+    
 }
-//extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource {
-//
-//
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return items.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier , for: indexPath) as! CustomCell
-//
-//        cell.customLabelName.text = "salam"
-//        cell.customImageView.image = UIImage (named : items [indexPath.item].imageName )
-//
-//        return cell
-//    }
-//
-//}

@@ -43,23 +43,5 @@ class AllOfGymViewController: UIViewController , UICollectionViewDataSource , UI
         setup()
     }
     
-//    private func collectionViewItemSize2(){
-//        if collectionViewflowLayout == nil {
-//            let numberOfItemPerRow : CGFloat = 3
-//            let lineSpacing : CGFloat = 5
-//            let interItemSpacing : CGFloat = 5
-//            let width = (allOfGymCollection.frame.width - (numberOfItemPerRow-1)*interItemSpacing)/numberOfItemPerRow
-//            let height = width
-//            collectionViewflowLayout = UICollectionViewFlowLayout()
-//            collectionViewflowLayout.itemSize = CGSize(width: width, height: height)
-//            collectionViewflowLayout.sectionInset = UIEdgeInsets.zero
-//            collectionViewflowLayout.scrollDirection = .vertical
-//            collectionViewflowLayout.minimumLineSpacing = lineSpacing
-//            collectionViewflowLayout.minimumInteritemSpacing = interItemSpacing
-//            allOfGymCollection.setCollectionViewLayout(collectionViewflowLayout, animated: true)
-//
-//        }
-//        }
-//
-
+//    
 }

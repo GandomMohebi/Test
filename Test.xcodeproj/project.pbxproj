@@ -17,6 +17,10 @@
 		4BADFE8E22FA261100685800 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BADFE8B22FA261100685800 /* 3.png */; };
 		4BADFE8F22FA261100685800 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BADFE8C22FA261100685800 /* 11.png */; };
 		4BADFE9122FB560D00685800 /* AllOfGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFE9022FB560D00685800 /* AllOfGymViewController.swift */; };
+		4BB7B9F52309D610004C23A8 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7B9F42309D610004C23A8 /* Sport.swift */; };
+		4BB7B9F72309D76B004C23A8 /* Coach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7B9F62309D76B004C23A8 /* Coach.swift */; };
+		4BB7B9F92309D874004C23A8 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7B9F82309D874004C23A8 /* Connection.swift */; };
+		4BB7B9FB230C8A60004C23A8 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BB7B9FA230C8A60004C23A8 /* login.jpg */; };
 		4BBE20B722F70973002618C8 /* GymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBE20B622F70973002618C8 /* GymViewController.swift */; };
 		4BBE20BB22F7813D002618C8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBE20BA22F7813D002618C8 /* 1.png */; };
 		4BCBF5FC22D48C72006AE34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCBF5FB22D48C72006AE34E /* AppDelegate.swift */; };
@@ -60,6 +64,10 @@
 		4BADFE8B22FA261100685800 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		4BADFE8C22FA261100685800 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
 		4BADFE9022FB560D00685800 /* AllOfGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllOfGymViewController.swift; sourceTree = "<group>"; };
+		4BB7B9F42309D610004C23A8 /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
+		4BB7B9F62309D76B004C23A8 /* Coach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coach.swift; sourceTree = "<group>"; };
+		4BB7B9F82309D874004C23A8 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		4BB7B9FA230C8A60004C23A8 /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpg; sourceTree = "<group>"; };
 		4BBE20B622F70973002618C8 /* GymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymViewController.swift; sourceTree = "<group>"; };
 		4BBE20BA22F7813D002618C8 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		4BCBF5F822D48C72006AE34E /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +168,9 @@
 			children = (
 				4BCBF5FB22D48C72006AE34E /* AppDelegate.swift */,
 				4BCBF5FD22D48C72006AE34E /* ViewController.swift */,
+				4BB7B9F42309D610004C23A8 /* Sport.swift */,
+				4BB7B9F82309D874004C23A8 /* Connection.swift */,
+				4BB7B9F62309D76B004C23A8 /* Coach.swift */,
 				4B73EDB922E4A2C0001B1907 /* Gym.swift */,
 				4BCBF5FF22D48C72006AE34E /* Main.storyboard */,
 				4BADFE9022FB560D00685800 /* AllOfGymViewController.swift */,
@@ -168,6 +179,7 @@
 				4B9190EB22FDADD900068013 /* GymDetailViewController.swift */,
 				4B29059F22F8B07B0015E352 /* CustoCell */,
 				4BCBF60222D48C74006AE34E /* Assets.xcassets */,
+				4BB7B9FA230C8A60004C23A8 /* login.jpg */,
 				4BADFE8A22FA261100685800 /* 2.png */,
 				4BADFE8B22FA261100685800 /* 3.png */,
 				4BADFE8C22FA261100685800 /* 11.png */,
@@ -318,6 +330,7 @@
 				4B2905A322F8B0B10015E352 /* CustomCell.xib in Resources */,
 				4BCBF60622D48C74006AE34E /* LaunchScreen.storyboard in Resources */,
 				4BADFE8F22FA261100685800 /* 11.png in Resources */,
+				4BB7B9FB230C8A60004C23A8 /* login.jpg in Resources */,
 				4BBE20BB22F7813D002618C8 /* 1.png in Resources */,
 				4BCBF60322D48C74006AE34E /* Assets.xcassets in Resources */,
 				4BADFE8E22FA261100685800 /* 3.png in Resources */,
@@ -441,7 +454,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB7B9F72309D76B004C23A8 /* Coach.swift in Sources */,
+				4BB7B9F92309D874004C23A8 /* Connection.swift in Sources */,
 				4BBE20B722F70973002618C8 /* GymViewController.swift in Sources */,
+				4BB7B9F52309D610004C23A8 /* Sport.swift in Sources */,
 				4B73EDBA22E4A2C0001B1907 /* Gym.swift in Sources */,
 				4BCBF5FE22D48C72006AE34E /* ViewController.swift in Sources */,
 				4BCBF5FC22D48C72006AE34E /* AppDelegate.swift in Sources */,

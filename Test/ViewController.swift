@@ -41,7 +41,7 @@ class ViewController: UIViewController , UITableViewDataSource{
         },
                                          error: {
                                             (fault : Fault?) -> Void in
-                                            print("Server reported an error: \(fault?.description)")
+                                           print("Server reported an error: \(fault?.description)")
         })
     }
     
@@ -117,7 +117,7 @@ class ViewController: UIViewController , UITableViewDataSource{
 
 //        dataStore?.find({
 //            (array) -> () in
-//            self.gymArray = array as! [[String : Any]]
+//            self.gymArray = array as! [gym]
 //            print("Result: \(self.gymArray)")
 //        },
 //                        error: {

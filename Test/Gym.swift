@@ -14,4 +14,5 @@ class gym : NSObject {
     var tel : String?
     var id : Int = 0
     var image: String?
+    var type: String?
 }

@@ -21,7 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         backendless?.initApp(APP_ID , apiKey : API_KEY)
         
         
-        UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        window = UIWindow();
+        window?.rootViewController = MainViewController();
+        window?.makeKeyAndVisible();
+        
+//        UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        
         
         return true
     }

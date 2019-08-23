@@ -20,13 +20,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rub-xp-voi">
-                        <rect key="frame" x="34" y="0.0" width="95" height="94"/>
+                        <rect key="frame" x="0.0" y="0.0" width="163" height="94"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="94" id="5mJ-Er-sys"/>
+                            <constraint firstAttribute="height" constant="94" id="MwP-CQ-XXe"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="st1-ME-Aon">
-                        <rect key="frame" x="20" y="94" width="123" height="49"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="st1-ME-Aon">
+                        <rect key="frame" x="0.0" y="94" width="163" height="49"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,12 +34,13 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="st1-ME-Aon" firstAttribute="top" secondItem="rub-xp-voi" secondAttribute="bottom" id="3cN-lB-vPQ"/>
-                <constraint firstItem="rub-xp-voi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="34" id="5cD-pA-kq5"/>
-                <constraint firstItem="rub-xp-voi" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="7bM-I8-Re4"/>
-                <constraint firstAttribute="bottom" secondItem="st1-ME-Aon" secondAttribute="bottom" id="e9B-uk-JZw"/>
-                <constraint firstItem="rub-xp-voi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eJ8-6O-39z"/>
-                <constraint firstItem="rub-xp-voi" firstAttribute="centerX" secondItem="st1-ME-Aon" secondAttribute="centerX" id="ngc-wE-fwb"/>
+                <constraint firstAttribute="trailing" secondItem="st1-ME-Aon" secondAttribute="trailing" id="BfQ-IT-E8s"/>
+                <constraint firstAttribute="bottom" secondItem="st1-ME-Aon" secondAttribute="bottom" id="Mgp-98-afJ"/>
+                <constraint firstItem="st1-ME-Aon" firstAttribute="top" secondItem="rub-xp-voi" secondAttribute="bottom" id="Rk9-5Y-79I"/>
+                <constraint firstItem="rub-xp-voi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="i57-Oe-dFe"/>
+                <constraint firstAttribute="trailing" secondItem="rub-xp-voi" secondAttribute="trailing" id="n9W-hq-lJD"/>
+                <constraint firstItem="rub-xp-voi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pBo-nS-JJR"/>
+                <constraint firstItem="st1-ME-Aon" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yeP-cY-z2d"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="163" height="143"/>

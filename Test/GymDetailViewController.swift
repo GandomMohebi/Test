@@ -9,7 +9,7 @@
 import UIKit
 
 class GymDetailViewController: UIViewController {
-    var item: item?
+    var item: gym?
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -17,7 +17,7 @@ class GymDetailViewController: UIViewController {
         super.viewDidLoad()
 
         if let item = self.item {
-            imageView.image = UIImage(named: item.imageName)
+            imageView.image = UIImage(named: item.image!)
         }
 
     }
